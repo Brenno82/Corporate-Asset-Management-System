@@ -1,5 +1,6 @@
 <?php
 include "config/database.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +14,14 @@ include "config/database.php";
 </head>
 <body>
     <div class="container">
-        <form class action="" method="post">
+        <form class action="/views/assets/login.php" method="post">
+            <label for="">E-mail</label>
+            <input type="email" name="email" required>
 
+            <label for="">Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit" name="login">Sign In</button>
         </form>
     </div>
 </body>
